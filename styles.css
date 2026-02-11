@@ -1,0 +1,476 @@
+/* -----------------------------------------------------------------
+    styles.css: UPDATED COLOR VERSION 2
+    Portfolio: Kulsoom Feroz Kazi | AI & UX Strategist
+----------------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+
+
+/* --- 1. CSS Variables & Global Reset --- */
+:root {
+    --color-primary: #1a1a1a;       /* Dark Text / Black */
+    --color-background: #ffffff;    /* Pure White Background */
+    --color-accent: #f5f5f5;        /* Off-White/Light Gray (Nav BG) */
+    
+    /* GLOBAL MAIN ACCENT COLOR (Sage Green: #83ac7e) */
+    --color-accent-main: #83ac7e; 
+    
+    /* BROWN/TAN Colors for Skills Table */
+    --color-accent-brown-bg: #A18579;
+    --color-accent-brown-text: #FDF1E5; 
+    --color-accent-brown-dark: #8C6E61; 
+    
+    /* Skills Section Background Color */
+    --color-skills-section-bg: #ece3d4; 
+    
+    /* Aim Box Color */
+    --color-aim-box: #FFCDC1; /* Melon */
+    
+    /* Experience Section Background Color */
+    --color-experience-bg: #ddd3d2; 
+    
+    /* NEW CARD COLORS (UPDATED) */
+    --color-soft-seashell: #ffcdc1; /* Changed from #F2D9C7 */
+    --color-dark-grey-text: #302e4d; 
+    
+    /* FINAL STONE BACKGROUND COLOR */
+    --color-dark-teal-bg: #E4E5DD; 
+    
+    --font-heading: 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--color-background); 
+    color: var(--color-primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.section {
+    padding: 80px 5%;
+}
+
+/* --- 2. Structural Classes (For Full Width/Layout Fix) --- */
+.main-container {
+    width: 100%;
+    min-height: 100vh;
+}
+.main-content {
+    padding-left: 0; 
+    width: 100%;
+}
+.aside {
+    display: none !important; 
+    visibility: hidden;
+}
+
+/* --- 3. Navigation Bar (Top-Horizontal) --- */
+.navbar {
+    background-color: var(--color-accent);
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    position: sticky; 
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--color-primary);
+    margin: 0 15px;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+.navbar a:hover {
+    color: var(--color-accent-main);
+}
+
+/* --- Hero Section & Buttons --- */
+.hero {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-accent);
+    width: 100%;
+}
+.hero-images {
+    display: flex;
+    overflow: hidden;
+    height: 350px; 
+    width: 100%;
+}
+.hero-images img {
+    flex: 1;
+    object-fit: cover;
+    min-width: 0;
+    width: 20%; 
+}
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 5%;
+    width: 100%;
+}
+.subtitle-box button {
+    background: var(--color-accent-main); 
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+
+/* --- 4. Section Grid Layout (About & Experience) --- */
+.section-content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 50% / 50% split */
+    gap: 40px;
+    position: relative; 
+    z-index: 1;
+    align-items: start;
+}
+.side-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-accent-main); 
+    display: inline-block;
+}
+.sub-heading {
+    font-size: 1.2em;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--color-primary);
+    border-bottom: 1px solid var(--color-accent-main);
+    display: inline-block;
+}
+
+/* --- AIM BOX STYLING --- */
+.aim-box-container {
+    background-color: var(--color-aim-box); 
+    padding: 25px;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: var(--color-primary); 
+    margin-top: 30px;
+}
+.aim-box-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    background-color: #f0c3a8; 
+}
+.aim-box-container .side-title {
+    color: var(--color-primary); 
+    border-bottom-color: var(--color-primary);
+    font-weight: 800;
+}
+.aim-box-container p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin-top: 15px;
+    color: var(--color-primary);
+}
+
+
+/* --- Info Box & Buttons --- */
+.info-box-compact .btn {
+    background: var(--color-accent-main);
+    color: white;
+    padding: 8px 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 15px;
+    display: inline-block;
+}
+
+/* --- Timeline/Education/Experience Style --- */
+.timeline-item i {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em;
+    color: var(--color-accent-main);
+}
+.experience-list {
+    margin: 10px 0 0 0;
+    list-style: disc;
+    padding-left: 20px;
+}
+.experience-list li {
+    font-size: 0.9em;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    /* This original setting was for dark BG, but overridden below for light BG */
+    color: rgba(255, 255, 255, 0.9);
+}
+
+
+/* --- Dark Background Sections (02, Footer) --- */
+.dark-bg {
+    background-color: var(--color-experience-bg);
+    color: var(--color-primary); 
+}
+.dark-bg .side-title {
+     border-bottom-color: var(--color-primary); 
+}
+/* Ensure headings inside light background are prominent (black) */
+.dark-bg .side-title, 
+.dark-bg .sub-heading,
+.dark-bg h4 {
+    color: var(--color-primary); 
+    font-weight: 800; 
+}
+.dark-bg .sub-heading {
+    border-bottom: 1px solid var(--color-primary);
+}
+.dark-bg .experience-list li {
+    color: var(--color-primary);
+}
+
+/* --- 4. Skills Table Section (Custom Brown/Tan Styling) --- */
+.dark-bg-skills {
+    background-color: var(--color-skills-section-bg);
+    color: var(--color-primary); 
+    margin-top: 30px; 
+    padding: 50px 5%; 
+}
+
+.dark-bg-skills .section-main-heading, 
+.dark-bg-skills .section-subtitle {
+    color: var(--color-primary);
+}
+
+
+/* --- 5. SKILLS CARD SECTION STYLING (NEW) --- */
+.skills-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns for the cards */
+    gap: 30px;
+    margin-top: 40px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skill-card {
+    background-color: var(--color-soft-seashell); 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    color: var(--color-dark-grey-text); 
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card .card-title {
+    font-size: 1.4em;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2); 
+    font-weight: 800;
+    color: var(--color-dark-grey-text); 
+}
+
+.skill-card .card-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-card .card-list li {
+    font-size: 1em;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+    line-height: 1.4;
+}
+
+.skill-card .card-list li::before {
+    content: "•"; 
+    color: var(--color-accent-main); 
+    font-size: 1.2em;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+
+/* --- 6. CORE CAPABILITIES SECTION (BLURRED PROJECTS LIST) --- */
+#capabilities {
+    padding: 80px 5%;
+    background-color: var(--color-dark-teal-bg) !important; /* Very light background */
+    
+    position: relative;
+    z-index: 1;
+    /* CORRECTED: Set base color for this section to dark for visibility */
+    color: var(--color-primary); 
+}
+
+.section-main-heading {
+    /* STYLE FOR FLOATING UNEVEN HEADER */
+    background-color: rgba(255, 255, 255, 0.1); 
+    /* CORRECTED: Set heading color to black for visibility */
+    color: var(--color-primary);
+    padding: 10px 25px;
+    border-radius: 20px 5px 20px 5px; 
+    display: inline-block;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+.section-subtitle {
+    /* CORRECTED: Set subtitle color to black for visibility */
+    color: var(--color-primary); 
+    font-size: 1.1em;
+    margin-bottom: 40px;
+}
+
+.capabilities-blur-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.project-blur-card {
+    /* GLASSMORHISM EFFECT (BLUR CONFIRMED) */
+    background-color: rgba(255, 255, 255, 0.2); 
+    backdrop-filter: blur(8px); 
+    -webkit-backdrop-filter: blur(8px); 
+    border-radius: 10px 30px 10px 30px; 
+    border: 1px solid rgba(255, 255, 255, 0.4); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    
+    /* Layout for Icon and Text */
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    position: relative; 
+    z-index: 3;
+}
+.project-blur-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    border-color: var(--color-accent-main);
+    background-color: rgba(255, 255, 255, 0.3); 
+}
+
+.project-blur-card i {
+    flex-shrink: 0; 
+    font-size: 1.8em;
+    margin-right: 20px;
+    /* CORRECTED: Set icon color to dark */
+    color: var(--color-primary); 
+}
+
+.project-blur-card .details h4 {
+    margin-bottom: 3px;
+    font-size: 1.1em;
+    /* CORRECTED: Set heading color to dark */
+    color: var(--color-primary); 
+}
+.project-blur-card .details p {
+    font-size: 0.9em;
+    /* CORRECTED: Set paragraph color to dark */
+    color: var(--color-primary);
+    text-transform: none;
+}
+.capabilities-grid { display: none; } 
+
+
+/* --- Project Grid (03) --- */
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 30px;
+}
+.post-item {
+    background-color: var(--color-accent);
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 15px; 
+    border: 1px solid rgba(0,0,0,0.05);
+}
+.post-item img {
+    margin-bottom: 15px;
+    margin-left: -15px; 
+    margin-right: -15px; 
+    width: calc(100% + 30px); 
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+/* UNUSED BUTTON STYLING REMOVED */
+
+
+/* --- 7. Footer (Contact) --- */
+.footer {
+    background-color: var(--color-accent-main);
+    color: var(--color-background); 
+    text-align: center;
+    padding: 80px 5%;
+}
+.footer a {
+    color: white;
+}
+
+
+/* --- 8. JS Animation Classes --- */
+.navbar.scrolled {
+    background-color: var(--color-background); 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* --- 9. Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .section-content-grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+    .capabilities-grid {
+        grid-template-columns: 1fr;
+    }
+    .skills-card-grid {
+        grid-template-columns: 1fr;
+    }
+}
