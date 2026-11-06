@@ -1,41 +1,39 @@
 # Kulsoom Feroz Kazi — Portfolio
 
-Personal portfolio showcasing my work across **AI, UI/UX, product design, and frontend development**.
+A personal portfolio focused on AI/ML, product design, and the work of turning ideas into usable experiences.
 
-## 🌐 Live Portfolio
+## Current redesign
 
-[Visit my portfolio](https://hermuserra.github.io/kulsoom-portfolio/)
+This branch contains the 2026 portfolio redesign. The existing `main` branch and live portfolio are left untouched until the redesign is reviewed and merged.
 
-## ✨ What You'll Find
+## Run locally
 
-- 🤖 AI & Machine Learning Projects
-- 🎨 UI/UX & Product Design
-- 💻 Frontend Development
-- 🔎 Product Research & Strategy
-- 📱 Interactive Digital Experiences
+This is a lightweight static HTML, CSS, and JavaScript site. From the repository root, run:
 
-## 🛠️ Tech Stack
+```bash
+python -m http.server 8000
+```
 
-- HTML
-- CSS
-- JavaScript
+Then open http://localhost:8000.
 
-## 🎯 About
+## Structure
 
-I'm an **AI & Data Science student** interested in building thoughtful digital products at the intersection of **AI, product design, and user experience**.
+- `index.html` — page content and project detail dialog
+- `styles.css` — responsive visual system, layout, and motion
+- `script.js` — cursor-reactive particle field, navigation, and project interactions
 
-I enjoy exploring how technology, design, and user needs can come together to create useful and engaging digital experiences.
+## Selected projects
 
-## 📂 Featured Work
+- **Rizzumé** — NLP resume matching prototype
+- **Moodify** — Naive Bayes mood classification prototype
+- **LookieGlimmr** — image classifier using pretrained MobileNetV2
+- **UFit** — AI-based fitness recommendation team project
+- **Mood-based fragrance recommendations** — L’Oréal Brandstorm 2026 concept
 
-The portfolio includes selected projects covering AI/ML, UI/UX, frontend development, and product-focused work.
+Projects are described at their current prototype or concept stage. Repository links are provided where a public project repository is available.
 
-## 📫 Connect
+## Links
 
-- **LinkedIn:** [Kulsoom Feroz Kazi](https://linkedin.com/in/kulsoom-k-b52112220)
-- **GitHub:** [HerMuserra](https://github.com/HerMuserra)
-- **Portfolio:** [hermuserra.github.io](https://hermuserra.github.io/kulsoom-portfolio/)
-
----
-
-**Building, designing, learning.**
+- GitHub: https://github.com/HerMuserra
+- LinkedIn: https://linkedin.com/in/kulsoom-k-b52112220
+- Contact: kulsoomferozkazi1220@gmail.com
